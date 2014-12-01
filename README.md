@@ -22,6 +22,8 @@ By:
 
 This project is used for studying purpose only.
 
+```Service - CentraSite-WSO2-Governance.pdf``` provides initial exploration result about SOA Governance, CentraSite, and WSO2 Governance Registry.
+
 ---
 
-Last Updated: November 28, 2014
+Last Updated: December 2, 2014
