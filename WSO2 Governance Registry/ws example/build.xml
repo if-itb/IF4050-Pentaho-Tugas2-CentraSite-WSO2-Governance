@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="samples" default="help" basedir=".">
+    <property name="registry.home" value="../.."/>
+    <property name="lib.dir" value="lib"/>
+    
+    <!-- Help -->
+    <target name="help">
+        <echo/>
+    </target>
+    <property name="class.dir" value="target/classes"/>
+    
+    <!-- Clean -->
+    <target name="clean">
+        <delete dir="target" quiet="true"/>
+        <delete dir="${class.dir}" quiet="true"/>
+    </target>
+    
+    
+    <!-- Run -->
+    <target name="run" depends="compile">
+        <java classname="sample.SampleWSRegistryClient" classpathref="javac.classpath" fork="true"/>
+    </target>
+    
+    <!-- Initialize -->
+    <target name="init">
+        <mkdir dir="${class.dir}"/>
+        <path id="javac.classpath">
+            <pathelement path="${class.dir}"/>
+            <pathelement path="${registry.home}/repository/lib"/>
+            <fileset dir="${registry.home}/repository/lib">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+    </target>
+    
+    <!-- Compilation -->
+    <target name="compile" depends="init" description="Compile all Java">
+        <javac srcdir="src" destdir="${class.dir}">
+            <classpath refid="javac.classpath"/>
+        </javac>
+    </target>
+</project>
