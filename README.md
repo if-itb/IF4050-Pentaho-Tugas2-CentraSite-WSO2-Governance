@@ -21,7 +21,7 @@ This project is used for studying purpose only.
 
 ```Service - CentraSite-WSO2-Governance.pdf``` provides initial exploration result about SOA Governance, CentraSite, and WSO2 Governance Registry.
 
-Please access ```https://github.com/if-itb/IF4050-Pentaho-Tugas2-CentraSite-WSO2-Governance/wiki``` for further information.
+Please access [this page](https://github.com/if-itb/IF4050-Pentaho-Tugas2-CentraSite-WSO2-Governance/wiki) for further information.
 
 ---
 
