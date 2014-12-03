@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p: %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Level of logging into package "sample" is INFO -->
+	<logger name="sample">
+		<level value="INFO" />
+	</logger>
+
+	<root>
+		<!-- The default level of logging is FATAL -->
+		<priority value="FATAL" />
+		<!-- default log to console -->
+		<appender-ref ref="CONSOLE" />		
+	</root>
+
+</log4j:configuration>
